@@ -14,7 +14,7 @@ function TestInput() {
         e.preventDefault();
         console.log(city);
         if (city.length > 1) {
-            axios.get(`https://scjournalapiv2.herokuapp.com/forcast/${city}`)
+            axios.get(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${city}`)
             .then(function (response) {
             console.log(response.data);
             })
