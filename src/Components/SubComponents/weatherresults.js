@@ -1,9 +1,9 @@
 import React from 'react';
 
-function WeatherResults() {
+function WeatherResults(props) {
     return (
         <div>
-        <h1>Weather Results</h1>
+        <h1>Weather Results {console.log(props)}</h1>
         </div>
     );
 }

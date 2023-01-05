@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import WeatherResults from './weatherresults';
 
 function AreaSelector() {
 
@@ -7,8 +8,18 @@ function AreaSelector() {
 
     const [daycount, setDayCount] = useState(0);
 
+    const [weatherdata, setWeatherData] = useState({
+        forecast: null
+    });
+
     const handleChange = (e) => {
         setArea(e.target.value);
+    }
+
+    const weatherdataupdate = (data) => {
+        setWeatherData(() => ({
+            forecast: data
+        }))
     }
 
     const handleSubmit = (e) => { 
@@ -19,6 +30,8 @@ function AreaSelector() {
             axios.get(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${area}/${daycount}}`)
             .then(function (response) {
             console.log(response.data);
+            weatherdataupdate(response.data.forecast.forecastday);
+            console.log(weatherdata.forecast);
             })
             .catch(function (error) {
                 console.log(error);
@@ -35,6 +48,7 @@ function AreaSelector() {
             <div value={3} onClick={() => setDayCount(3)}>3 Days</div>
             <div value={7} onClick={() => setDayCount(7)}>7 Days</div>
             <button type="submit">Submit</button>
+            {weatherdata.forecast ? <WeatherResults data={weatherdata.forecast} /> : <h2>No Results Found</h2>}
         </form>
     );
 }
