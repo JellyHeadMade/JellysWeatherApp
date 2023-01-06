@@ -27,9 +27,10 @@ function AreaSelector() {
          console.log(area);
          console.log(daycount);
         if (area.length > 1) {
-            axios.get(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${area}/${daycount}}`)
+            axios.get(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${area}/${daycount}`)
             .then(function (response) {
             console.log(response.data);
+            console.log(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${area}/${daycount}}`)
             weatherdataupdate(response.data.forecast.forecastday);
             console.log(weatherdata.forecast);
             })
@@ -44,9 +45,9 @@ function AreaSelector() {
             <h2>Please input your area code to get the Weather!</h2>
             <label>Area</label>
             <input type="text" value={area} onChange={handleChange} />
-            <div value={1} onClick={() => setDayCount(1)}>1 Day</div>
-            <div value={3} onClick={() => setDayCount(3)}>3 Days</div>
-            <div value={7} onClick={() => setDayCount(7)}>7 Days</div>
+            <div onClick={() => setDayCount(1)}>Current</div>
+            <div onClick={() => setDayCount(2)}>2 Days</div>
+            <div onClick={() => setDayCount(3)}>3 Days</div>
             <button type="submit">Submit</button>
             {weatherdata.forecast ? <WeatherResults data={weatherdata.forecast} /> : <h2>No Results Found</h2>}
         </form>
