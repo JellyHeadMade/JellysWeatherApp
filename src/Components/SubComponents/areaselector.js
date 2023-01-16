@@ -5,9 +5,8 @@ import WeatherResults from './weatherresults';
 function AreaSelector() {
 
     const [area, setArea] = useState('');
-
     const [daycount, setDayCount] = useState(0);
-
+    const [metric, setMetric] = useState('f');
     const [weatherdata, setWeatherData] = useState({
         forecast: null
     });
@@ -48,8 +47,10 @@ function AreaSelector() {
             <div onClick={() => setDayCount(1)}>Current</div>
             <div onClick={() => setDayCount(2)}>2 Days</div>
             <div onClick={() => setDayCount(3)}>3 Days</div>
+            <div onClick={() => setMetric('f')}>Fehrinheight</div>
+            <div onClick={() => setMetric('c')}>celcius</div>
             <button type="submit">Submit</button>
-            {weatherdata.forecast ? <WeatherResults data={weatherdata.forecast} /> : <h2>No Results Found</h2>}
+            {weatherdata.forecast ? <WeatherResults metric={metric} data={weatherdata.forecast} /> : <h2>No Results Found</h2>}
         </form>
     );
 }
