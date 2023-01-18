@@ -1,3 +1,16 @@
+.current-temp{
+    padding: 3%;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.weather-car-wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
 .weather-report-day-wrapper{
     height: 33vh;
     width: 100%;

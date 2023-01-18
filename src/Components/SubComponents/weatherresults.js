@@ -4,8 +4,8 @@ function WeatherResults(props) {
     return (
         <div>
         <h1>Weather Results</h1>
-        <div className="current-temp">current temp is {props.data[0].day.avgtemp_f}F</div>
-        <div>{props.data.map((ForcastDay, index) => {
+        <div className="current-temp">current temp is {props.metric == 'f' ? props.data[0].day.avgtemp_f : props.data[0].day.avgtemp_c}F</div>
+        <div className='weather-car-wrapper'>{props.data.map((ForcastDay, index) => {
             return (
                 <div className='weather-report-day-wrapper'>
                     <div className='weather-report-date' key={index}>{ForcastDay.date}</div>
