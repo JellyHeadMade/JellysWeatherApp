@@ -5,15 +5,69 @@
     text-decoration: underline;
 }
 
-.weather-car-wrapper{
+.weather-card-wrapper{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-}
+    padding-left: 2%;
 
-.weather-report-day-wrapper{
-    height: 33vh;
-    width: 100%;
-    display: grid;
-    grid-gap: 10px;
+    .weather-report-day-wrapper{
+        height: 100%;
+        width: 100%;
+
+        .weather-report-bg{
+            background-color: #25f59e;
+            width: 95%;
+
+            .weather-report-text{
+                padding: 20px;
+                font-size: 1.5em;
+                font-weight: 700;
+                color: white;
+
+                &__date{
+                    font-size: 1.4em;
+                    font-weight: 600;
+                    text-decoration: none;
+                    padding: 0 5px 0 5px;
+                }
+                &__avg-temp{
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 0 5px 0 5px;
+                }
+                &__condition{
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 0 5px 0 5px;
+                }
+                &__rain{
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 0 5px 0 5px;
+                }
+                &__high-temp{
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 0 5px 0 5px;
+                }
+                &__low-temp{
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 0 5px 0 5px;
+                }
+                &__humidity{
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 0 5px 0 5px;
+                }
+            }
+        }
+    }
 }
