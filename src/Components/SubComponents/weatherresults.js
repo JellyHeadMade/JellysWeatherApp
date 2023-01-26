@@ -4,8 +4,8 @@ function WeatherResults(props) {
 
     const [flip, setFlip] = useState(false);
 
-    const flipped = () => {
-        console.log('trying to flip');
+    const flipped = (index) => {
+        console.log('trying to flip' + index);
         if (!flip) {  
             setFlip(true);
         } else {
@@ -19,7 +19,7 @@ function WeatherResults(props) {
         <div className='weather-card-wrapper'>{props.data.map((ForcastDay, index) => {
             return (
                 <div className='weather-card'>
-                    <div onClick={flipped} className={flip ? 'weather-card-inner.isflipped' : 'weather-card-inner'}>
+                    <div onClick={() => flipped(index)} className={flip ? 'weather-card-inner.isflipped' : 'weather-card-inner'}>
                         <div className='card__face weather-card-front'>{ForcastDay.date}</div>
                         <div className='card__face weather-card-back'>
                             <div className='weather-card-text__date' key={index}>{ForcastDay.date}</div>
