@@ -40,17 +40,17 @@ function AreaSelector() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Please input your area code to get the Weather!</h2>
-            <label>Area</label>
-            <input type="text" value={area} onChange={handleChange} />
-            <div onClick={() => setDayCount(1)}>Current</div>
-            <div onClick={() => setDayCount(2)}>2 Days</div>
-            <div onClick={() => setDayCount(3)}>3 Days</div>
-            <div onClick={() => setMetric('f')}>Fehrinheight</div>
-            <div onClick={() => setMetric('c')}>celcius</div>
-            <button type="submit">Submit</button>
-            {weatherdata.forecast ? <WeatherResults metric={metric} data={weatherdata.forecast} /> : <h2>No Results Found</h2>}
+        <form className='mainform' onSubmit={handleSubmit}>
+            <h2 className='input-message'>Please input your area code to get the Weather!</h2>
+            <label className='area-label'>Area</label>
+            <input className='input-field' type="text" value={area} onChange={handleChange} />
+            <div className='day-count-btn-1' onClick={() => setDayCount(1)}>Current</div>
+            <div className='day-count-btn-2' onClick={() => setDayCount(2)}>2 Days</div>
+            <div className='day-count-btn-3' onClick={() => setDayCount(3)}>3 Days</div>
+            <div className='metric-count-btn-f' onClick={() => setMetric('f')}>Fehrinheight</div>
+            <div className='metric-count-btn-c' onClick={() => setMetric('c')}>celcius</div>
+            <button className='submit-btn' type="submit">Submit</button>
+            {weatherdata.forecast ? <WeatherResults metric={metric} data={weatherdata.forecast} /> : <h2 className='result-placeholder'>Please input an area code and click submit for Results!</h2>}
         </form>
     );
 }
