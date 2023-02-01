@@ -1,5 +1,6 @@
 .mainform {
     background-color: azure;
+    height: 90vh;
 
     .input-message {
         background-color: yellow;
@@ -13,20 +14,44 @@
         background-color: blue;
     }
 
-    .day-count-btn-1 {
-        background-color: red;
-    }
-    .day-count-btn-2 {
-        background-color: blue;
-    }
-    .day-count-btn-3 {
-        background-color: black;
-    }
+    .button-selector-wrapper {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: [first-s] 25px [forth-s] 25px [first-e second-s] 25px [forth-e fifth-s] 25px [second-e third-s] 25px [fifth-e] 25px [third-e];
+        grid-template-rows: [toprow-s] 25px [toprow-e bottomrow-s] 25px [bottomrow-e];
+        width: auto;
 
-    .metric-count-btn-f {
-        background-color: brown;
-    }
-    .metric-count-btn-c {
-        background-color: green;
+
+        .day-count-btn-1 {
+            grid-column: first-s / first-e;
+            grid-row: toprow-s / toprow-e;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+        .day-count-btn-2 {
+            grid-column: second-s / second-e;
+            grid-row: toprow-s / toprow-e;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+        .day-count-btn-3 {
+            grid-column: third-s / third-e;
+            grid-row: toprow-s / toprow-e;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+    
+        .metric-count-btn-f {
+            grid-column: forth-s / forth-e;
+            grid-row: bottomrow-s / bottomrow-e;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+        .metric-count-btn-c {
+            grid-column: fifth-s / fifth-e;
+            grid-row: bottomrow-s / bottomrow-e;
+            border-radius: 20%;
+            cursor: pointer;
+        }
     }
 }
