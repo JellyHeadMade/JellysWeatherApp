@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function WeatherResults(props) {
 
@@ -7,6 +7,16 @@ function WeatherResults(props) {
         1: false,
         2: false,
     });
+
+    const [loadding, setLoadding] = useState(false);
+
+    useEffect(() => {
+        setLoadding(true);
+        setTimeout(() => {
+            setLoadding(false);
+        }, 1000);
+    }, [props.data]);
+    
 
     const flipped = (index) => {
         console.log('trying to flip' + index);
