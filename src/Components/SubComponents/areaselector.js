@@ -20,6 +20,8 @@ function AreaSelector() {
         c: false
     });
 
+    const [loadding, setLoadding] = useState(false);
+
     const dayButtonOnClick = (value) => {
         console.log(value);
         switch (value) {
@@ -70,6 +72,7 @@ function AreaSelector() {
 
     const handleSubmit = (e) => { 
         e.preventDefault();
+        setLoadding(true);
          console.log(area);
          console.log(daycount);
         if (area.length > 1) {
@@ -79,9 +82,11 @@ function AreaSelector() {
             console.log(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${area}/${daycount}}`)
             weatherdataupdate(response.data.forecast.forecastday);
             console.log(weatherdata.forecast);
+            setLoadding(false);
             })
             .catch(function (error) {
                 console.log(error);
+                setLoadding(false);
             });
         }
     }
