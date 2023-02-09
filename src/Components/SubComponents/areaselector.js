@@ -109,7 +109,7 @@ function AreaSelector() {
                     <div className='metric-count-btn-c' onClick={() => metricButtonOnClick('c')} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>celsius</div>}
             </div>
             <button className='submit-btn' type="submit">Submit</button>
-            {loadding ? <div className='loading-container'><div className='spinner'></div></div> : <div className='test'>{weatherdata.forecast ? <WeatherResults metric={metric} data={weatherdata.forecast} /> : <h2 className='result-placeholder'>Please input an area code and click submit for Results!</h2>}</div>}
+            {loadding ? <div className='loading-container'><div className='spinner'></div></div> : <div className='results-wrapper'>{weatherdata.forecast ? <WeatherResults metric={metric} data={weatherdata.forecast} /> : <h2 className='result-placeholder'>Please input an area code and click submit for Results!</h2>}</div>}
         </form>
     );
 }
