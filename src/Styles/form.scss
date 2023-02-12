@@ -19,44 +19,57 @@
         box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
     }
 
-    .button-selector-wrapper {
-        display: grid;
+    .outer-button-wrapper {
+        display: flex;
         justify-content: center;
-        grid-template-columns: [first-s] 25px [forth-s] 25px [first-e second-s] 25px [forth-e fifth-s] 25px [second-e third-s] 25px [fifth-e] 25px [third-e];
-        grid-template-rows: [toprow-s] 25px [toprow-e bottomrow-s] 25px [bottomrow-e];
-        width: auto;
-
-
-        .day-count-btn-1 {
-            grid-column: first-s / first-e;
-            grid-row: toprow-s / toprow-e;
-            border-radius: 20%;
-            cursor: pointer;
-        }
-        .day-count-btn-2 {
-            grid-column: second-s / second-e;
-            grid-row: toprow-s / toprow-e;
-            border-radius: 20%;
-            cursor: pointer;
-        }
-        .day-count-btn-3 {
-            grid-column: third-s / third-e;
-            grid-row: toprow-s / toprow-e;
-            border-radius: 20%;
-            cursor: pointer;
-        }
+        padding: 1em;
+        
+        .button-selector-wrapper {
+            display: grid;
+            // justify-content: space-between;
+            align-items: center;
+            grid-template-columns: [first-s] 1fr [forth-s] 1fr [first-e second-s] 1fr [forth-e fifth-s] 1fr [second-e third-s] 1fr [fifth-e] 1fr [third-e];
+            grid-template-rows: [toprow-s] 1fr [toprow-e bottomrow-s] 1fr [bottomrow-e];
+            width: 30%;
+            grid-gap: 10px;
     
-        .metric-count-btn-f {
-            grid-column: forth-s / forth-e;
-            grid-row: bottomrow-s / bottomrow-e;
-            border-radius: 20%;
-            cursor: pointer;
-        }
-        .metric-count-btn-c {
-            grid-column: fifth-s / fifth-e;
-            grid-row: bottomrow-s / bottomrow-e;
-            border-radius: 20%;
-            cursor: pointer;
+    
+            .day-count-btn-1 {
+                grid-column: first-s / first-e;
+                grid-row: toprow-s / toprow-e;
+                border-radius: 10em;
+                padding: 0.3em;
+                cursor: pointer;
+            }
+            .day-count-btn-2 {
+                grid-column: second-s / second-e;
+                grid-row: toprow-s / toprow-e;
+                border-radius: 10em;
+                padding: 0.3em;
+                cursor: pointer;
+            }
+            .day-count-btn-3 {
+                grid-column: third-s / third-e;
+                grid-row: toprow-s / toprow-e;
+                border-radius: 10em;
+                padding: 0.3em;
+                cursor: pointer;
+            }
+        
+            .metric-count-btn-f {
+                grid-column: forth-s / forth-e;
+                grid-row: bottomrow-s / bottomrow-e;
+                border-radius: 10em;
+                padding: 0.3em;
+                cursor: pointer;
+            }
+            .metric-count-btn-c {
+                grid-column: fifth-s / fifth-e;
+                grid-row: bottomrow-s / bottomrow-e;
+                border-radius: 10em;
+                padding: 0.3em;
+                cursor: pointer;
+            }
         }
     }
 }

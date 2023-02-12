@@ -96,17 +96,19 @@ function AreaSelector() {
             <h2 className='input-message'>Please input your area code to get the Weather!</h2>
             <label className='area-label'>Area</label>
             <input className='input-field' type="text" value={area} onChange={handleChange} />
-            <div className='button-selector-wrapper'>
-                {dayButtonActive[1] ? <div className='day-count-btn-1' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>Current</div> :
-                    <div className='day-count-btn-1' onClick={() => dayButtonOnClick(1)} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>Current</div>}
-                {dayButtonActive[2] ? <div className='day-count-btn-2' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>2 Days</div> :
-                    <div className='day-count-btn-2' onClick={() => dayButtonOnClick(2)} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>2 Days</div>}
-                {dayButtonActive[3] ? <div className='day-count-btn-3' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>3 Days</div> :
-                    <div className='day-count-btn-3' onClick={() => dayButtonOnClick(3)} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>3 Days</div>}
-                {metricButtonActive['f'] ? <div className='metric-count-btn-f' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>fahrenheit</div> :
-                    <div className='metric-count-btn-f' onClick={() => metricButtonOnClick('f')} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>fahrenheit</div>}
-                {metricButtonActive['c'] ? <div className='metric-count-btn-c' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>celsius</div> :
-                    <div className='metric-count-btn-c' onClick={() => metricButtonOnClick('c')} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>celsius</div>}
+            <div className='outer-button-wrapper'>
+                <div className='button-selector-wrapper'>
+                    {dayButtonActive[1] ? <div className='day-count-btn-1' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>Current</div> :
+                        <div className='day-count-btn-1' onClick={() => dayButtonOnClick(1)} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>Current</div>}
+                    {dayButtonActive[2] ? <div className='day-count-btn-2' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>2 Days</div> :
+                        <div className='day-count-btn-2' onClick={() => dayButtonOnClick(2)} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>2 Days</div>}
+                    {dayButtonActive[3] ? <div className='day-count-btn-3' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>3 Days</div> :
+                        <div className='day-count-btn-3' onClick={() => dayButtonOnClick(3)} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>3 Days</div>}
+                    {metricButtonActive['f'] ? <div className='metric-count-btn-f' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>fahrenheit</div> :
+                        <div className='metric-count-btn-f' onClick={() => metricButtonOnClick('f')} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>fahrenheit</div>}
+                    {metricButtonActive['c'] ? <div className='metric-count-btn-c' style={{backgroundColor: '#00FF00', transition: '0.2s ease-in-out', cursor: 'default'}}>celsius</div> :
+                        <div className='metric-count-btn-c' onClick={() => metricButtonOnClick('c')} style={{backgroundColor: '#C0C0C0', transition: '0.2s ease-in-out'}}>celsius</div>}
+                </div>
             </div>
             <button className='submit-btn' type="submit">Submit</button>
             {loadding ? <div className='loading-container'><div className='spinner'></div></div> : <div className='results-wrapper'>{weatherdata.forecast ? <WeatherResults metric={metric} data={weatherdata.forecast} /> : <h2 className='result-placeholder'>Please input an area code and click submit for Results!</h2>}</div>}
