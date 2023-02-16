@@ -16,6 +16,20 @@ function WeatherResults(props) {
             setFlip({ ...flip, [index]: false });
         }
     }
+
+    const rangecheck = (value) => {
+        console.log('rangecheck hit!!!!!');
+        console.log(value);
+        if (value >= -100 && value <= 32) {
+            return {backgroundImage: "linear-gradient(to bottom left, rgb(110, 161, 104) 10%, rgb(77, 74, 230) 115%)" };
+        }
+        if (value >= 33 && value <= 67) {
+            return {backgroundImage: "linear-gradient(to bottom left, rgb(228, 211, 115) 10%, rgb(69, 165, 160) 115%)" };
+        }
+        if (value >= 68 && value <= 150) {
+            return {backgroundImage: "linear-gradient(to bottom left, rgb(231, 102, 102) 10%, rgb(229, 231, 87) 115%)" };
+        }
+    }
     return (
         <div>
         <h1>Weather Results</h1>
@@ -24,7 +38,7 @@ function WeatherResults(props) {
             return (
                 <div onClick={() => flipped(index)} className={flip[index] ? `weather-card-inner-${index}-isflipped` : `weather-card-inner-${index}`}>
                     <div className='card__face weather-card-front'>{ForcastDay.date}</div>
-                    <div className='card__face weather-card-back'>
+                    <div className='card__face weather-card-back' style={rangecheck(ForcastDay.day.avgtemp_f)}>
                         <div className='weather-card-text__date' key={index}>{ForcastDay.date}</div>
                         <div className='weather-card-text' key={index}>Average Tempature for the day is {props.metric === 'f' ? ForcastDay.day.avgtemp_f : ForcastDay.day.avgtemp_c}</div>
                         <div className='weather-card-text' key={index}>The Condition for the day is {ForcastDay.day.condition.text}</div>
