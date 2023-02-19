@@ -33,7 +33,9 @@ function WeatherResults(props) {
     return (
         <div>
         <h1>Weather Results</h1>
-        <div className="current-temp">current temp is {props.metric === 'f' ? props.data[0].day.avgtemp_f : props.data[0].day.avgtemp_c}{props.metric === 'f' ? 'F' : 'C'}</div>
+        <div className="current-temp-title">current temp
+            <div className='current-temp'>{props.metric === 'f' ? props.data[0].day.avgtemp_f : props.data[0].day.avgtemp_c}{props.metric === 'f' ? 'F' : 'C'}</div>
+        </div>
         <div className='weather-card-wrapper'>{props.data.map((ForcastDay, index) => {
             return (
                 <div onClick={() => flipped(index)} className={flip[index] ? `weather-card-inner-${index}-isflipped` : `weather-card-inner-${index}`}>
