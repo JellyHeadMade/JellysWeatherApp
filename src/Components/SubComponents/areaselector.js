@@ -98,15 +98,15 @@ function AreaSelector() {
             <input className='input-field' type="text" value={area} onChange={handleChange} />
             <div className='outer-button-wrapper'>
                 <div className='button-selector-wrapper'>
-                    {dayButtonActive[1] ? <div className='day-count-btn-1' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default'}}>Current</div> :
+                    {dayButtonActive[1] ? <div className='day-count-btn-1' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>Current</div> :
                         <div className='day-count-btn-1' onClick={() => dayButtonOnClick(1)} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>Current</div>}
-                    {dayButtonActive[2] ? <div className='day-count-btn-2' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default'}}>2 Days</div> :
+                    {dayButtonActive[2] ? <div className='day-count-btn-2' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>2 Days</div> :
                         <div className='day-count-btn-2' onClick={() => dayButtonOnClick(2)} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>2 Days</div>}
-                    {dayButtonActive[3] ? <div className='day-count-btn-3' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default'}}>3 Days</div> :
+                    {dayButtonActive[3] ? <div className='day-count-btn-3' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>3 Days</div> :
                         <div className='day-count-btn-3' onClick={() => dayButtonOnClick(3)} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>3 Days</div>}
-                    {metricButtonActive['f'] ? <div className='metric-count-btn-f' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default'}}>fahrenheit</div> :
+                    {metricButtonActive['f'] ? <div className='metric-count-btn-f' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>fahrenheit</div> :
                         <div className='metric-count-btn-f' onClick={() => metricButtonOnClick('f')} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>fahrenheit</div>}
-                    {metricButtonActive['c'] ? <div className='metric-count-btn-c' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default'}}>celsius</div> :
+                    {metricButtonActive['c'] ? <div className='metric-count-btn-c' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>celsius</div> :
                         <div className='metric-count-btn-c' onClick={() => metricButtonOnClick('c')} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>celsius</div>}
                 </div>
             </div>
