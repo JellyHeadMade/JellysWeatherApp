@@ -3,3 +3,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.8);
 }
+
+button {
+    border-radius: 1em;
+    border-style: none;
+    padding: 0.3% 0.7% 0.3% 0.7%;
+    font-size: 1em;
+    cursor: pointer;
+}

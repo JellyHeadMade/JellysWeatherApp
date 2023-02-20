@@ -1,19 +1,17 @@
 .mainform {
-    // background-color: azure;
     height: 90vh;
 
     .input-message {
-        // background-color: yellow;
         text-decoration: underline;
     }
 
     .area-label {
-        // background-color: aquamarine;
         padding: 0 1% 0 1%;
     }
 
     .input-field {
-        // background-color: blue;
+        padding: 0.2%;
+        font-size: 1em;
         border-radius: 25px;
         border-style: none;
         box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
@@ -26,7 +24,6 @@
         
         .button-selector-wrapper {
             display: grid;
-            // justify-content: space-between;
             align-items: center;
             grid-template-columns: [first-s] 1fr [forth-s] 1fr [first-e second-s] 1fr [forth-e fifth-s] 1fr [second-e third-s] 1fr [fifth-e] 1fr [third-e];
             grid-template-rows: [toprow-s] 1fr [toprow-e bottomrow-s] 1fr [bottomrow-e];

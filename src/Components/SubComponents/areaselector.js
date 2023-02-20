@@ -94,7 +94,7 @@ function AreaSelector() {
     return (
         <form className='mainform' onSubmit={handleSubmit}>
             <h2 className='input-message'>Please input your area code to get the Weather!</h2>
-            <label className='area-label'>Area</label>
+            <label className='area-label'>Area Code</label>
             <input className='input-field' type="text" value={area} onChange={handleChange} />
             <div className='outer-button-wrapper'>
                 <div className='button-selector-wrapper'>
@@ -110,7 +110,7 @@ function AreaSelector() {
                         <div className='metric-count-btn-c' onClick={() => metricButtonOnClick('c')} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>celsius</div>}
                 </div>
             </div>
-            <button className='submit-btn' type="submit">Submit</button>
+            <button className='submit-btn1' type="submit">Submit</button>
             {loadding ? <div className='loading-container'><div className='spinner'></div></div> : <div className='results-wrapper'>{weatherdata.forecast ? <WeatherResults metric={metric} data={weatherdata.forecast} /> : <h2 className='result-placeholder'>Please input an area code and click submit for Results!</h2>}</div>}
         </form>
     );
