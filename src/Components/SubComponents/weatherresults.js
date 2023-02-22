@@ -42,12 +42,12 @@ function WeatherResults(props) {
                     <div className='card__face weather-card-front'>{ForcastDay.date}</div>
                     <div className='card__face weather-card-back' style={rangecheck(ForcastDay.day.avgtemp_f)}>
                         <div className='weather-card-text__date' key={index}>{ForcastDay.date}</div>
-                        <div className='weather-card-text' key={index}>Average Tempature for the day is {props.metric === 'f' ? ForcastDay.day.avgtemp_f : ForcastDay.day.avgtemp_c}</div>
-                        <div className='weather-card-text' key={index}>The Condition for the day is {ForcastDay.day.condition.text}</div>
-                        <div className='weather-card-text' key={index}>Chance of rain is {ForcastDay.day.daily_will_it_rain}</div>
-                        <div className='weather-card-text' key={index}>High tempature for the day is {props.metric === 'f' ? ForcastDay.day.maxtemp_f : ForcastDay.day.maxtemp_c}</div>
-                        <div className='weather-card-text' key={index}>Low tempature for the day is {props.metric === 'f' ? ForcastDay.day.mintemp_f : ForcastDay.day.mintemp_c}</div>
-                        <div className='weather-card-text' key={index}>Humidity for the day : {ForcastDay.day.avghumidity}</div>
+                        <div className='weather-card-text__temp' key={index}>Average Tempature for the day is {props.metric === 'f' ? ForcastDay.day.avgtemp_f : ForcastDay.day.avgtemp_c}</div>
+                        <div className='weather-card-text__condition' key={index}>The Condition for the day is {ForcastDay.day.condition.text}</div>
+                        <div className='weather-card-text__rain' key={index}>Chance of rain is {ForcastDay.day.daily_will_it_rain}</div>
+                        <div className='weather-card-text__high' key={index}>High tempature for the day is {props.metric === 'f' ? ForcastDay.day.maxtemp_f : ForcastDay.day.maxtemp_c}</div>
+                        <div className='weather-card-text__low' key={index}>Low tempature for the day is {props.metric === 'f' ? ForcastDay.day.mintemp_f : ForcastDay.day.mintemp_c}</div>
+                        <div className='weather-card-text__humidity' key={index}>Humidity for the day : {ForcastDay.day.avghumidity}</div>
                     </div>
                 </div>
             )

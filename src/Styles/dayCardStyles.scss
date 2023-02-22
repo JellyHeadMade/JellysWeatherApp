@@ -53,15 +53,73 @@
             font-weight: 100;
             transform: rotateY(180deg);
 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+
             .weather-card-text {
-                padding: 1%;
-                font-size: 1.5em;
-                font-weight: 100;
-                color: bisque;
-                text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+
+                &__temp {
+                    grid-row: temp-s / temp-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.5em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__high {
+                    grid-row: high-s / high-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__low {
+                    grid-row: low-s / low-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__condition {
+                    grid-row: condition-s / condition-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__humidity {
+                    grid-row: humidity-s / humidity-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__rain {
+                    grid-row: rain-s / rain-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
 
                 &__date {
                     font-weight: 700;
+                    font-size: 1.6em;
+                    padding-top: 1%;
+                    grid-row: date-s / dates-e;
+                    align-self: center;
                 }
             }
         }
@@ -99,16 +157,73 @@
             height: 100%;
             border-radius: 25px;
             transform: rotateY(180deg);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
 
             .weather-card-text {
-                padding: 1%;
-                font-size: 1.5em;
-                font-weight: 100;
-                color: bisque;
-                text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+
+                &__temp {
+                    grid-row: temp-s / temp-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.5em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__high {
+                    grid-row: high-s / high-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__low {
+                    grid-row: low-s / low-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__condition {
+                    grid-row: condition-s / condition-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__humidity {
+                    grid-row: humidity-s / humidity-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__rain {
+                    grid-row: rain-s / rain-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
 
                 &__date {
                     font-weight: 700;
+                    font-size: 1.6em;
+                    padding-top: 1%;
+                    grid-row: date-s / dates-e;
+                    align-self: center;
                 }
             }
         }
@@ -148,18 +263,75 @@
             height: 100%;
             border-radius: 25px;
             transform: rotateY(180deg);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
 
             .weather-card-text {
-                padding: 1%;
-                font-size: 1.5em;
-                font-weight: 100;
-                color: bisque;
-                text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+
+                &__temp {
+                    grid-row: temp-s / temp-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.5em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__high {
+                    grid-row: high-s / high-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__low {
+                    grid-row: low-s / low-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__condition {
+                    grid-row: condition-s / condition-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__humidity {
+                    grid-row: humidity-s / humidity-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__rain {
+                    grid-row: rain-s / rain-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
 
                 &__date {
                     font-weight: 700;
+                    font-size: 1.6em;
+                    padding-top: 1%;
+                    grid-row: date-s / dates-e;
+                    align-self: center;
                 }
-            }
+            }            
         }
     }
     .weather-card-inner-1-isflipped {
@@ -195,16 +367,73 @@
             height: 100%;
             border-radius: 25px;
             transform: rotateY(180deg);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
 
             .weather-card-text {
-                padding: 1%;
-                font-size: 1.5em;
-                font-weight: 100;
-                color: bisque;
-                text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+
+                &__temp {
+                    grid-row: temp-s / temp-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.5em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__high {
+                    grid-row: high-s / high-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__low {
+                    grid-row: low-s / low-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__condition {
+                    grid-row: condition-s / condition-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__humidity {
+                    grid-row: humidity-s / humidity-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__rain {
+                    grid-row: rain-s / rain-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
 
                 &__date {
                     font-weight: 700;
+                    font-size: 1.6em;
+                    padding-top: 1%;
+                    grid-row: date-s / dates-e;
+                    align-self: center;
                 }
             }
         }
@@ -244,16 +473,73 @@
             height: 100%;
             border-radius: 25px;
             transform: rotateY(180deg);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
 
             .weather-card-text {
-                padding: 1%;
-                font-size: 1.5em;
-                font-weight: 100;
-                color: bisque;
-                text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+
+                &__temp {
+                    grid-row: temp-s / temp-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.5em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__high {
+                    grid-row: high-s / high-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__low {
+                    grid-row: low-s / low-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__condition {
+                    grid-row: condition-s / condition-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__humidity {
+                    grid-row: humidity-s / humidity-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__rain {
+                    grid-row: rain-s / rain-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
 
                 &__date {
                     font-weight: 700;
+                    font-size: 1.6em;
+                    padding-top: 1%;
+                    grid-row: date-s / dates-e;
+                    align-self: center;
                 }
             }
         }
@@ -291,16 +577,73 @@
             height: 100%;
             border-radius: 25px;
             transform: rotateY(180deg);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
 
             .weather-card-text {
-                padding: 1%;
-                font-size: 1.5em;
-                font-weight: 100;
-                color: bisque;
-                text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+
+                &__temp {
+                    grid-row: temp-s / temp-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.5em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__high {
+                    grid-row: high-s / high-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__low {
+                    grid-row: low-s / low-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__condition {
+                    grid-row: condition-s / condition-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__humidity {
+                    grid-row: humidity-s / humidity-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
+                &__rain {
+                    grid-row: rain-s / rain-e;
+                    align-self: center;
+                    padding: 1%;
+                    font-size: 1.3em;
+                    font-weight: 100;
+                    color: bisque;
+                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                }
 
                 &__date {
                     font-weight: 700;
+                    font-size: 1.6em;
+                    padding-top: 1%;
+                    grid-row: date-s / dates-e;
+                    align-self: center;
                 }
             }
         }
