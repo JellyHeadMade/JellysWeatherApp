@@ -5,3 +5,49 @@
     color: white;
     text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
 }
+
+@mixin cardInnerBase {
+    width: 25vw;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+@mixin cardBackText {
+    align-self: center;
+    padding: 1%;
+    font-size: 1.3em;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+}
+
+@mixin cardFaceStyles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 25px;
+    font-weight: 300;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+@mixin cardFrontStyles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    font-size: 2em;
+}
+
+@mixin cardBackGrid {
+    height: 100%;
+    border-radius: 25px;
+    transform: rotateY(180deg);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+}

@@ -20,98 +20,45 @@
     // card 1
 
     .weather-card-inner-0 {
-        width: 25vw;
-        height: 100%;
-        transition: 1s;
-        transform-style: preserve-3d;
-        cursor: pointer;
-        position: relative;
+        @include cardInnerBase;
 
         .card__face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            overflow: hidden;
-            border-radius: 25px;
-            font-weight: 300;
-            box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+            @include cardFaceStyles;
         }
 
         .weather-card-front {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(36, 36, 36);
-            font-size: 2em;
+            @include cardFrontStyles;
         }
 
-        .weather-card-back {
-            background-image: linear-gradient(to bottom left, rgb(228, 211, 115) 10%, rgb(69, 165, 160) 115%);
-            height: 100%;
-            border-radius: 25px;
-            font-weight: 100;
-            transform: rotateY(180deg);
-
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+        .weather-card-back {            
+            @include cardBackGrid;
 
             .weather-card-text {
 
                 &__temp {
                     grid-row: temp-s / temp-e;
-                    align-self: center;
-                    padding: 1%;
                     font-size: 1.5em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardText;
                 }
                 &__high {
                     grid-row: high-s / high-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__low {
                     grid-row: low-s / low-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__condition {
                     grid-row: condition-s / condition-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__humidity {
                     grid-row: humidity-s / humidity-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__rain {
                     grid-row: rain-s / rain-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
 
                 &__date {
@@ -125,97 +72,46 @@
         }
     }
     .weather-card-inner-0-isflipped {
-        width: 25vw;
-        height: 100%;
-        transition: 1s;
-        transform-style: preserve-3d;
-        cursor: pointer;
-        position: relative;
+        @include cardInnerBase;
         transform: rotateY(180deg);
 
         .card__face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            overflow: hidden;
-            border-radius: 25px;
-            font-weight: 300;
-            box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+            @include cardFaceStyles;
         }
 
         .weather-card-front {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(36, 36, 36);
-            font-size: 2em;
+            @include cardFrontStyles;
         }
 
         .weather-card-back {
-            background-image: linear-gradient(to bottom left, rgb(228, 211, 115) 10%, rgb(69, 165, 160) 115%);
-            height: 100%;
-            border-radius: 25px;
-            transform: rotateY(180deg);
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+            @include cardBackGrid;
 
             .weather-card-text {
 
                 &__temp {
                     grid-row: temp-s / temp-e;
-                    align-self: center;
-                    padding: 1%;
                     font-size: 1.5em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardText;
                 }
                 &__high {
                     grid-row: high-s / high-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__low {
                     grid-row: low-s / low-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__condition {
                     grid-row: condition-s / condition-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__humidity {
                     grid-row: humidity-s / humidity-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__rain {
                     grid-row: rain-s / rain-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
 
                 &__date {
@@ -232,96 +128,45 @@
     // card 2
 
     .weather-card-inner-1 {
-        width: 25vw;
-        height: 100%;
-        transition: 1s;
-        transform-style: preserve-3d;
-        cursor: pointer;
-        position: relative;
+        @include cardInnerBase;
 
         .card__face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            overflow: hidden;
-            border-radius: 25px;
-            box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+            @include cardFaceStyles;
         }
 
         .weather-card-front {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(36, 36, 36);
-            font-size: 2em;
-            font-weight: 300;
+            @include cardFrontStyles;
         }
 
         .weather-card-back {
-            background-image: linear-gradient(to bottom left, rgb(231, 102, 102) 10%, rgb(229, 231, 87) 115%);
-            height: 100%;
-            border-radius: 25px;
-            transform: rotateY(180deg);
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+            @include cardBackGrid;
 
             .weather-card-text {
 
                 &__temp {
                     grid-row: temp-s / temp-e;
-                    align-self: center;
-                    padding: 1%;
                     font-size: 1.5em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardText;
                 }
                 &__high {
                     grid-row: high-s / high-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__low {
                     grid-row: low-s / low-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__condition {
                     grid-row: condition-s / condition-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__humidity {
                     grid-row: humidity-s / humidity-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__rain {
                     grid-row: rain-s / rain-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
 
                 &__date {
@@ -335,97 +180,46 @@
         }
     }
     .weather-card-inner-1-isflipped {
-        width: 25vw;
-        height: 100%;
-        transition: 1s;
-        transform-style: preserve-3d;
-        cursor: pointer;
-        position: relative;
+        @include cardInnerBase;
         transform: rotateY(180deg);
 
         .card__face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            overflow: hidden;
-            border-radius: 25px;
-            box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+            @include cardFaceStyles;
         }
 
         .weather-card-front {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(36, 36, 36);
-            font-weight: 300;
-            font-size: 2em;
+            @include cardFrontStyles;
         }
 
         .weather-card-back {
-            background-image: linear-gradient(to bottom left, rgb(231, 102, 102) 10%, rgb(229, 231, 87) 115%);
-            height: 100%;
-            border-radius: 25px;
-            transform: rotateY(180deg);
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+            @include cardBackGrid;
 
             .weather-card-text {
 
                 &__temp {
                     grid-row: temp-s / temp-e;
-                    align-self: center;
-                    padding: 1%;
                     font-size: 1.5em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardText;
                 }
                 &__high {
                     grid-row: high-s / high-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__low {
                     grid-row: low-s / low-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__condition {
                     grid-row: condition-s / condition-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__humidity {
                     grid-row: humidity-s / humidity-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__rain {
                     grid-row: rain-s / rain-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
 
                 &__date {
@@ -442,96 +236,45 @@
     // card 3
 
     .weather-card-inner-2 {
-        width: 25vw;
-        height: 100%;
-        transition: 1s;
-        transform-style: preserve-3d;
-        cursor: pointer;
-        position: relative;
+        @include cardInnerBase;
 
         .card__face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            overflow: hidden;
-            border-radius: 25px;
-            box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+            @include cardFaceStyles;
         }
 
         .weather-card-front {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(36, 36, 36);
-            font-weight: 300;
-            font-size: 2em;
+            @include cardFrontStyles;
         }
 
         .weather-card-back {
-            background-image: linear-gradient(to bottom left, rgb(110, 161, 104) 10%, rgb(77, 74, 230) 115%);
-            height: 100%;
-            border-radius: 25px;
-            transform: rotateY(180deg);
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+            @include cardBackGrid;
 
             .weather-card-text {
 
                 &__temp {
                     grid-row: temp-s / temp-e;
-                    align-self: center;
-                    padding: 1%;
                     font-size: 1.5em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardText;
                 }
                 &__high {
                     grid-row: high-s / high-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__low {
                     grid-row: low-s / low-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__condition {
                     grid-row: condition-s / condition-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__humidity {
                     grid-row: humidity-s / humidity-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__rain {
                     grid-row: rain-s / rain-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
 
                 &__date {
@@ -545,41 +288,19 @@
         }
     }
     .weather-card-inner-2-isflipped {
-        width: 25vw;
-        height: 100%;
-        transition: 1s;
-        transform-style: preserve-3d;
-        cursor: pointer;
-        position: relative;
+        @include cardInnerBase;
         transform: rotateY(180deg);
 
         .card__face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            overflow: hidden;
-            border-radius: 25px;
-            box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+            @include cardFaceStyles;
         }
 
         .weather-card-front {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(36, 36, 36);
-            font-weight: 300;
-            font-size: 2em;
+            @include cardFrontStyles;
         }
 
         .weather-card-back {
-            background-image: linear-gradient(to bottom left, rgb(110, 161, 104) 10%, rgb(77, 74, 230) 115%);
-            height: 100%;
-            border-radius: 25px;
-            transform: rotateY(180deg);
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+            @include cardBackGrid;
 
             .weather-card-text {
 
@@ -590,48 +311,23 @@
                 }
                 &__high {
                     grid-row: high-s / high-e;
-                    font-size: 1.3em;
-                    align-self: center;
-                    padding: 1%;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__low {
                     grid-row: low-s / low-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__condition {
                     grid-row: condition-s / condition-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText
                 }
                 &__humidity {
                     grid-row: humidity-s / humidity-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
                 &__rain {
                     grid-row: rain-s / rain-e;
-                    align-self: center;
-                    padding: 1%;
-                    font-size: 1.3em;
-                    font-weight: 100;
-                    color: white;
-                    text-shadow: 0px 3px 10px  rgba(0, 0, 0, 1);
+                    @include cardBackText;
                 }
 
                 &__date {
