@@ -34,38 +34,28 @@
             .day-count-btn-1 {
                 grid-column: first-s / first-e;
                 grid-row: toprow-s / toprow-e;
-                border-radius: 10em;
-                padding: 0.3em;
-                cursor: pointer;
+                @include buttonBase;
             }
             .day-count-btn-2 {
                 grid-column: second-s / second-e;
                 grid-row: toprow-s / toprow-e;
-                border-radius: 10em;
-                padding: 0.3em;
-                cursor: pointer;
+                @include buttonBase;
             }
             .day-count-btn-3 {
                 grid-column: third-s / third-e;
                 grid-row: toprow-s / toprow-e;
-                border-radius: 10em;
-                padding: 0.3em;
-                cursor: pointer;
+                @include buttonBase;
             }
         
             .metric-count-btn-f {
                 grid-column: forth-s / forth-e;
                 grid-row: bottomrow-s / bottomrow-e;
-                border-radius: 10em;
-                padding: 0.3em;
-                cursor: pointer;
+                @include buttonBase;
             }
             .metric-count-btn-c {
                 grid-column: fifth-s / fifth-e;
                 grid-row: bottomrow-s / bottomrow-e;
-                border-radius: 10em;
-                padding: 0.3em;
-                cursor: pointer;
+                @include buttonBase;
             }
         }
     }

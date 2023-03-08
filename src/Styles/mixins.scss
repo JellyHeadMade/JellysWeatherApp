@@ -1,3 +1,4 @@
+// card style mixins
 @mixin cardText {
     align-self: center;
     padding: 1%;
@@ -50,4 +51,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: [date-s] 1.3fr [dates-e temp-s] 1fr [temp-e condition-s] 1fr [condition-e high-s] 1fr [high-e  low-s] 1fr [low-e humidity-s] 1fr [humidity-e rain-s] 1fr [rain-e];
+}
+
+//button style mixins
+@mixin buttonBase {
+    border-radius: 10em;
+    padding: 0.3em;
+    cursor: pointer;
 }
