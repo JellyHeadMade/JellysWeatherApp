@@ -17,6 +17,14 @@
     justify-content: space-evenly;
     font-weight: 700;
 
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
     // card 1
 
     .weather-card-inner-0 {

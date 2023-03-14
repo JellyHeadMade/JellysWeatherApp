@@ -20,13 +20,13 @@ function WeatherResults(props) {
     const rangecheck = (value) => {
         console.log('rangecheck hit!!!!!');
         console.log(value);
-        if (value >= -100 && value <= 32) {
+        if (Math.round(value) >= -100 && Math.round(value) <= 32) {
             return {backgroundImage: "linear-gradient(to bottom left, rgb(110, 161, 104) 10%, rgb(77, 74, 230) 115%)" };
         }
-        if (value >= 33 && value <= 67) {
+        if (Math.round(value) >= 33 && Math.round(value) <= 67) {
             return {backgroundImage: "linear-gradient(to bottom left, rgb(221, 197, 90) 1%, rgb(69, 165, 160) 115%)" };
         }
-        if (value >= 68 && value <= 150) {
+        if (Math.round(value) >= 68 && Math.round(value) <= 150) {
             return {backgroundImage: "linear-gradient(to bottom left, rgb(231, 102, 102) 10%, rgb(229, 231, 87) 115%)" };
         }
     }
