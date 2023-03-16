@@ -3,6 +3,7 @@
 
     .input-message {
         text-decoration: underline;
+        padding: 0 2% 0 2%;
     }
 
     .area-label {
@@ -29,6 +30,10 @@
             grid-template-rows: [toprow-s] 1fr [toprow-e bottomrow-s] 1fr [bottomrow-e];
             width: 30%;
             grid-gap: 10px;
+
+            @media only screen and (max-width: 1000px) {
+                width: 70%;
+            }
     
     
             .day-count-btn-1 {
