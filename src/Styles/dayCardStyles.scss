@@ -13,12 +13,12 @@
 .weather-card-wrapper{
     display: flex;
     width: 100%;
-    height: min-content;
+    height: 40vh;
     justify-content: space-evenly;
     font-weight: 700;
     padding-bottom: 5%;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1080px) {
         flex-direction: column;
         height: 100vh;
         justify-content: center;
