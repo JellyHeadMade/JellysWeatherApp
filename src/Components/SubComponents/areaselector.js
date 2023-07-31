@@ -23,7 +23,6 @@ function AreaSelector() {
     const [loadding, setLoadding] = useState(false);
 
     const dayButtonOnClick = (value) => {
-        console.log(value);
         switch (value) {
             case 1:
                 setDayButtonActive({ 1: true, 2: false, 3: false });
@@ -44,7 +43,6 @@ function AreaSelector() {
     }
 
     const metricButtonOnClick = (value) => {
-        console.log(value);
         switch (value) {
             case 'f':
                 setMetricButtonActive({ f: true, c: false });
@@ -73,19 +71,15 @@ function AreaSelector() {
     const handleSubmit = (e) => { 
         e.preventDefault();
         setLoadding(true);
-         console.log(area);
-         console.log(daycount);
         if (area.length > 1) {
             axios.get(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${area}/${daycount}`)
             .then(function (response) {
-            console.log(response.data);
-            console.log(`https://jellyweatherappproxyapi.herokuapp.com//forcast/${area}/${daycount}}`)
             weatherdataupdate(response.data.forecast.forecastday);
-            console.log(weatherdata.forecast);
             setLoadding(false);
             })
             .catch(function (error) {
                 console.log(error);
+                alert('Please input a valid Zip Code');
                 setLoadding(false);
             });
         }
@@ -94,8 +88,13 @@ function AreaSelector() {
     return (
         <form className='mainform' onSubmit={handleSubmit}>
             <h2 className='input-message'>Please input your area code to get the Weather!</h2>
-            <label className='area-label'>Area Code</label>
-            <input className='input-field' type="text" value={area} onChange={handleChange} />
+            <label className='area-label'>Zip Code</label>
+            <input className='input-field' type="text" 
+                placeholder='Zip Code'
+                value={area}
+                onChange={handleChange}
+                pattern='[\d]{5}'
+                maxLength={5} />
             <div className='outer-button-wrapper'>
                 <div className='button-selector-wrapper'>
                     {dayButtonActive[1] ? <div className='day-count-btn-1' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>Current</div> :
