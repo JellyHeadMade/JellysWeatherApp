@@ -6,7 +6,13 @@ function WeatherResults(props) {
         0: false,
         1: false,
         2: false,
-    });    
+    });
+    
+    const cardKeys = {
+        0: 1,
+        1: 2,
+        2: 3
+    }
 
     const flipped = (index) => {
         if (flip[index] === false) {
@@ -46,7 +52,7 @@ function WeatherResults(props) {
         </div>
         <div className='weather-card-wrapper'>{props.data.map((ForcastDay, index) => {
             return (
-                <div onClick={() => flipped(index)} className={flip[index] ? `weather-card-inner-${index}-isflipped` : `weather-card-inner-${index}`}>
+                <div key={cardKeys[index]} onClick={() => flipped(index)} className={flip[index] ? `weather-card-inner-${index}-isflipped` : `weather-card-inner-${index}`}>
                     <div className='card__face weather-card-front'>{ForcastDay.date}</div>
                     <div className='card__face weather-card-back' style={rangecheck(ForcastDay.day.avgtemp_f)}>
                         <div className='weather-card-text__date' key={`${randomString(16)}_date`}>{ForcastDay.date}</div>
