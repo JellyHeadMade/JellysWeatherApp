@@ -54,7 +54,7 @@ function WeatherResults(props) {
             return (
                 <div key={cardKeys[index]} onClick={() => flipped(index)} className={flip[index] ? `weather-card-inner-${index}-isflipped` : `weather-card-inner-${index}`}>
                     <div className='card__face weather-card-front'>{ForcastDay.date}</div>
-                    <div className='card__face weather-card-back' style={rangecheck(ForcastDay.day.avgtemp_f)}>
+                    <div className='card__face weather-card-back' style={rangecheck(ForcastDay.day.maxtemp_f)}>
                         <div className='weather-card-text__date' key={`${randomString(16)}_date`}>{ForcastDay.date}</div>
                         <div className='weather-card-text__temp' key={`${randomString(16)}_temp`}>Average Tempature for the day is {props.metric === 'f' ? ForcastDay.day.avgtemp_f : ForcastDay.day.avgtemp_c}</div>
                         <div className='weather-card-text__condition' key={`${randomString(16)}_condition`}>The Condition for the day is {ForcastDay.day.condition.text}</div>
