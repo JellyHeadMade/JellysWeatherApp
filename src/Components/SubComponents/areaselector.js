@@ -22,7 +22,12 @@ function AreaSelector() {
 
     const [loadding, setLoadding] = useState(false);
 
-    const dayButtonOnClick = (value) => {
+    const buttonStyle = [
+        { backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212' },
+        { backgroundColor: '#242424', transition: '0.2s ease-in-out' }
+    ]
+
+    const ButtonOnClick = (value) => {
         switch (value) {
             case 1:
                 setDayButtonActive({ 1: true, 2: false, 3: false });
@@ -36,14 +41,6 @@ function AreaSelector() {
                 setDayButtonActive({ 1: false, 2: false, 3: true });
                 setDayCount(3);
                 break;
-            default:
-                setDayButtonActive({ 1: true, 2: false, 3: false });
-                setDayCount(1);
-        }
-    }
-
-    const metricButtonOnClick = (value) => {
-        switch (value) {
             case 'f':
                 setMetricButtonActive({ f: true, c: false });
                 setMetric('f');
@@ -53,6 +50,8 @@ function AreaSelector() {
                 setMetric('c');
                 break;
             default:
+                setDayButtonActive({ 1: true, 2: false, 3: false });
+                setDayCount(1);
                 setMetricButtonActive({ f: true, c: false });
                 setMetric('f');
         }
@@ -97,16 +96,16 @@ function AreaSelector() {
                 maxLength={5} />
             <div className='outer-button-wrapper'>
                 <div className='button-selector-wrapper'>
-                    {dayButtonActive[1] ? <div className='day-count-btn-1' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>Current</div> :
-                        <div className='day-count-btn-1' onClick={() => dayButtonOnClick(1)} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>Current</div>}
-                    {dayButtonActive[2] ? <div className='day-count-btn-2' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>2 Days</div> :
-                        <div className='day-count-btn-2' onClick={() => dayButtonOnClick(2)} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>2 Days</div>}
-                    {dayButtonActive[3] ? <div className='day-count-btn-3' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>3 Days</div> :
-                        <div className='day-count-btn-3' onClick={() => dayButtonOnClick(3)} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>3 Days</div>}
-                    {metricButtonActive['f'] ? <div className='metric-count-btn-f' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>fahrenheit</div> :
-                        <div className='metric-count-btn-f' onClick={() => metricButtonOnClick('f')} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>fahrenheit</div>}
-                    {metricButtonActive['c'] ? <div className='metric-count-btn-c' style={{backgroundColor: '#36C2A4', transition: '0.2s ease-in-out', cursor: 'default', color: '#121212'}}>celsius</div> :
-                        <div className='metric-count-btn-c' onClick={() => metricButtonOnClick('c')} style={{backgroundColor: '#242424', transition: '0.2s ease-in-out'}}>celsius</div>}
+                    {dayButtonActive[1] ? <div className='day-count-btn-1' style={buttonStyle[0]}>Current</div> :
+                        <div className='day-count-btn-1' onClick={() => ButtonOnClick(1)} style={buttonStyle[1]}>Current</div>}
+                    {dayButtonActive[2] ? <div className='day-count-btn-2' style={buttonStyle[0]}>2 Days</div> :
+                        <div className='day-count-btn-2' onClick={() => ButtonOnClick(2)} style={buttonStyle[1]}>2 Days</div>}
+                    {dayButtonActive[3] ? <div className='day-count-btn-3' style={buttonStyle[0]}>3 Days</div> :
+                        <div className='day-count-btn-3' onClick={() => ButtonOnClick(3)} style={buttonStyle[1]}>3 Days</div>}
+                    {metricButtonActive['f'] ? <div className='metric-count-btn-f' style={buttonStyle[0]}>fahrenheit</div> :
+                        <div className='metric-count-btn-f' onClick={() => ButtonOnClick('f')} style={buttonStyle[1]}>fahrenheit</div>}
+                    {metricButtonActive['c'] ? <div className='metric-count-btn-c' style={buttonStyle[0]}>celsius</div> :
+                        <div className='metric-count-btn-c' onClick={() => ButtonOnClick('c')} style={buttonStyle[1]}>celsius</div>}
                 </div>
             </div>
             <button className='submit-btn1' type="submit">Submit</button>
